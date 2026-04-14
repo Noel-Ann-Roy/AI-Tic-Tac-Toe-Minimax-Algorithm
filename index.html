@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tic Tac Toe — Unbeatable</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="header">
+    <div class="logo">
+      <span class="logo-x">X</span>
+      <span class="logo-title">AI TicTacToe</span>
+      <span class="logo-o">O</span>
+    </div>
+    <div class="header-controls">
+      <button id="themeToggle" class="btn-icon" title="Toggle Dark/Light Mode">🌙</button>
+      <button id="modeToggle" class="btn-pill" title="Switch Game Mode">👥 PvP</button>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <aside class="panel panel-left">
+      <div class="panel-card scoreboard">
+        <h3 class="panel-title">Scoreboard</h3>
+        <div class="score-row">
+          <div class="score-item player-score">
+            <span class="score-label">You (X)</span>
+            <span class="score-value" id="scorePlayer">0</span>
+          </div>
+          <div class="score-item draw-score">
+            <span class="score-label">Draws</span>
+            <span class="score-value" id="scoreDraws">0</span>
+          </div>
+          <div class="score-item ai-score">
+            <span class="score-label">AI (O)</span>
+            <span class="score-value" id="scoreAI">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-card difficulty-card">
+        <h3 class="panel-title">Difficulty</h3>
+        <div class="difficulty-btns">
+          <button class="diff-btn" data-diff="easy">🎲 Easy</button>
+          <button class="diff-btn active" data-diff="medium">⚡ Medium</button>
+          <button class="diff-btn" data-diff="hard">💀 Hard</button>
+        </div>
+      </div>
+
+      <div class="panel-card heatmap-card">
+        <h3 class="panel-title">AI Heatmap</h3>
+        <p class="panel-hint">Best moves shown before AI plays</p>
+        <div class="heatmap-legend">
+          <span class="heat-cold"></span><span>Weak</span>
+          <span class="heat-hot"></span><span>Best</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="game-section">
+      <div class="status-bar">
+        <div id="statusMsg" class="status-msg">Your turn — place X</div>
+        <div id="thinkingIndicator" class="thinking-indicator hidden">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="thinking-text">AI thinking…</span>
+        </div>
+      </div>
+
+      <div class="board-wrapper">
+        <div id="board" class="board">
+
+        </div>
+      </div>
+
+      <div class="game-actions">
+        <button id="undoBtn" class="btn-secondary">↩ Undo</button>
+        <button id="restartBtn" class="btn-primary">⟳ Restart</button>
+      </div>
+    </section>
+
+    <aside class="panel panel-right">
+      <div class="panel-card ai-explanation">
+        <h3 class="panel-title">🧠 AI Brain</h3>
+        <div id="aiExplanation" class="explanation-text">
+          <p class="dim">AI will explain its moves here…</p>
+        </div>
+      </div>
+
+      <div class="panel-card move-history-card">
+        <h3 class="panel-title">Move History</h3>
+        <div id="moveHistory" class="move-history">
+          <p class="dim">No moves yet.</p>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-card">
+      <div id="overlayEmoji" class="overlay-emoji">🎉</div>
+      <div id="overlayMsg" class="overlay-msg">Player Wins!</div>
+      <div id="overlayWinLine" class="overlay-winline"></div>
+      <button id="overlayRestart" class="btn-primary large">Play Again</button>
+    </div>
+  </div>
+
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
