@@ -1,11 +1,8 @@
 # 🤖 AI Tic Tac Toe — Minimax Algorithm
 
-> A feature-rich, visually polished Tic Tac Toe game with an AI powered by the Minimax algorithm with Alpha-Beta pruning.
+ A feature-rich, visually polished Tic Tac Toe game with an AI powered by the Minimax algorithm with Alpha-Beta pruning.
 
-![Game Screenshot](https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square)
-![Vanilla JS](https://img.shields.io/badge/Built%20With-Vanilla%20JS-yellow?style=flat-square)
-![No Dependencies](https://img.shields.io/badge/Dependencies-None-blue?style=flat-square)
-![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+<img src='./assets/img1.png'><img src='./assets/img2.png'><img src='./assets/img3.png'><img src='./assets/img4.png'>
 
 ---
 
@@ -151,4 +148,4 @@ No npm, no bundler, no framework — pure HTML, CSS, and JS.
 
 ## 📄 License
 
-MIT © 2025 — feel free to use, modify, and share.
+MIT © 2026 — feel free to use, modify, and share.
